@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Video Scroller</title>
+  <link rel="stylesheet" href="./style.css">  
+  
+</head>
+
+<body>
+  <section class="header">
+    <div class="text">
+      <h1>Video Scroller</h1>
+      <p>
+        Video Scroller is a website where you can scroll through videos to view them.
+        This was inspired by <a href="https://www.apple.com/hk/en/airpods-pro/">Apple's website</a> 
+        where they have animated scrolling effects for their products.
+      </p>
+      <p> Select a video below or upload a video to get started.</p>
+ 
+      <!-- Buttons to change video source -->
+      <button type="button" id="bojji">Bojji</button> 
+      <button type="button" id="corgi">Corgi</button> 
+      <input id="upload-video-file" type='file' name="file" accept="video/mp4, video/mov">
+
+    </div>
+  </section>
+
+  <section class="video-container">
+    <video id="video" src="videos/bojji_final.mp4" muted class="video-scroll"></video>
+  </section>
+
+  <section class="footer">
+    <div class="text">
+      <p> This website uses the ScrollTrigger library. </p>
+      <p>To improve smoothness, you can:</p>
+      <ul>
+        <li class="indent_1">Use a trackpad instead of a mouse (enables smoother scrolling)</li>
+        <li class="indent_1">Use ffmpeg to process the video, using the following commands:</li>
+        <li class="indent_2">ffmpeg -i input.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4</li>
+        <li class="indent_2">ffmpeg -i input.mov -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output_960.mp4</li>
+      </ul>
+      <p class="end">A CS50 project</p>
+    </div>
+  </section>
+</body>
+</html>
+  
+<!-- ScrollTrigger, JS library for video scrolling -->
+<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+
+<script src="./script.js"></script>
