@@ -1,6 +1,7 @@
-//--- Original video scroll code - https://codepen.io/shshaw/pen/vYKBPbv/9e810322d70c306de2d18237d0cb2d78
+//--- Original video scroll code
+// https://codepen.io/shshaw/pen/vYKBPbv/9e810322d70c306de2d18237d0cb2d78
+// https://codepen.io/AdventurousDeveloper/pen/XWZxLyO
 
-console.clear();
 /* The encoding is super important here to enable frame-by-frame scrubbing. */
 
 // ffmpeg -i input.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4
@@ -69,12 +70,12 @@ setTimeout(function () {
 // Change video source
 document.getElementById("bojji").addEventListener("click", vidsource_Bojji);
 function vidsource_Bojji() {
-  document.getElementById("video").setAttribute('src', 'videos/bojji_final.mp4');
+  document.getElementById("video").setAttribute('src', 'static/bojji_final.mp4');
 };
 
 document.getElementById("corgi").addEventListener("click", vidsource_Corgi);
 function vidsource_Corgi() {
-  document.getElementById("video").setAttribute('src', 'videos/corgi_final.mp4');
+  document.getElementById("video").setAttribute('src', 'static/corgi_final.mp4');
 };
 
 // Display uploaded video as source
@@ -84,5 +85,3 @@ document.getElementById("upload-video-file").addEventListener("change", function
   var video = document.getElementById("video");
   video.src = media;
 });
-
-// TODO: Make favicon

@@ -49,6 +49,7 @@ button {
   display: inline-block;
   font-size: 16px;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 input {
@@ -59,12 +60,26 @@ input {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 25px;  
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin-right: 10px;
+  border-radius: 5px;
+}
+
+button:hover, #upload-video-file:hover {
+  background-color: dodgerblue;
+}
+
+a:link {
+  color: lightblue;
+}
+
+/* visited link */
+a:visited {
+  color: lightgreen;
 }
 
 

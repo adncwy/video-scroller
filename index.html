@@ -5,7 +5,18 @@
   <title>Video Scroller</title>
   <link rel="stylesheet" href="./style.css">  
   
+  <!-- For displaying favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon//site.webmanifest">
+
 </head>
+
+<!-- 
+Extension: Running ffmpeg to process videos for smoother scrolling
+https://phoenixnap.com/kb/ffmpeg-mac 
+-->
 
 <body>
   <section class="header">
@@ -27,12 +38,12 @@
   </section>
 
   <section class="video-container">
-    <video id="video" src="videos/bojji_final.mp4" muted class="video-scroll"></video>
+    <video id="video" src="static/bojji_final.mp4" muted class="video-scroll"></video>
   </section>
 
   <section class="footer">
     <div class="text">
-      <p> This website uses the ScrollTrigger library. </p>
+      <p> This website uses the <a href="https://greensock.com/scrolltrigger/">ScrollTrigger</a> library. </p>
       <p>To improve smoothness, you can:</p>
       <ul>
         <li class="indent_1">Use a trackpad instead of a mouse (enables smoother scrolling)</li>
