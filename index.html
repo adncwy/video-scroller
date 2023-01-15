@@ -15,6 +15,7 @@
 
 <!-- 
 Extension: Running ffmpeg to process videos for smoother scrolling
+3rd option: Use on Mac with a static build
 https://phoenixnap.com/kb/ffmpeg-mac 
 -->
 
@@ -23,11 +24,11 @@ https://phoenixnap.com/kb/ffmpeg-mac
     <div class="text">
       <h1>Video Scroller</h1>
       <p>
-        Video Scroller is a website where you can scroll through videos to view them.
+        Video Scroller is a website where you can scroll through videos to view them. You can play videos and pause at the exact frame you desire, or even play the video in reverse.
         This was inspired by <a href="https://www.apple.com/hk/en/airpods-pro/">Apple's website</a> 
         where they have animated scrolling effects for their products.
       </p>
-      <p> Select a video below or upload a video to get started.</p>
+      <p> Select a video below or upload a video to get started. Videos are kept locally on your device.</p>
  
       <!-- Buttons to change video source -->
       <button type="button" id="bojji">Bojji</button> 
@@ -43,15 +44,21 @@ https://phoenixnap.com/kb/ffmpeg-mac
 
   <section class="footer">
     <div class="text">
-      <p> This website uses the <a href="https://greensock.com/scrolltrigger/">ScrollTrigger</a> library. </p>
+      <p> This website uses the <a href="https://greensock.com/scrolltrigger/">ScrollTrigger</a> library. It is optimized for short clips of around 8 seconds. Longer videos may not work as intended.</p>
       <p>To improve smoothness, you can:</p>
       <ul>
         <li class="indent_1">Use a trackpad instead of a mouse (enables smoother scrolling)</li>
-        <li class="indent_1">Use ffmpeg to process the video, using the following commands:</li>
+        <li class="indent_1">Trim the video so it is 8 seconds or less</li>
+        <li class="indent_1">Use <a href="https://ffmpeg.org/">ffmpeg</a> to process the video, using the following commands:</li>
         <li class="indent_2">ffmpeg -i input.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4</li>
         <li class="indent_2">ffmpeg -i input.mov -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output_960.mp4</li>
       </ul>
-      <p class="end">A CS50 project</p>
+
+      <h2>Demo video</h2>
+      <div class="videowrapper">
+        <iframe width="1896" height="773" src="https://www.youtube.com/embed/PMVzCbx8atA" title="Pokémon Scarlet & Violet - Sada & Turo Battle Theme [HQ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+        <p class="end">A <a href="https://cs50.harvard.edu/x/">CS50</a> project</p>
     </div>
   </section>
 </body>
